@@ -60,3 +60,7 @@ client.on('message', async (msg) => {
 });
 
 client.initialize();
+
+// Mantém o Railway ativo
+const http = require('http');
+http.createServer((req, res) => res.end('Bot online - Universitário')).listen(process.env.PORT || 3000);
